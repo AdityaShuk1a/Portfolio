@@ -6,7 +6,6 @@
 ::selection{
   background-color: gray
 }
-@import "locomotive-scroll/dist/locomotive-scroll.css";
 body{
   background-color: black;
 }

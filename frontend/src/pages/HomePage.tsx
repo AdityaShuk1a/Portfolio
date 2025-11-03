@@ -1,6 +1,6 @@
 
 import DefaultHomePage from "./DefaultHomePage";
-import { ChevronDown, Divide } from "lucide-react";
+import { ChevronDown} from "lucide-react";
 import HomePagePart2 from "../components/homePageComponents/HomePagePart2";
 import Projects from "./Projects"
 import LastPage from "./LastPage";
