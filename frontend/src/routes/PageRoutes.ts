@@ -1,5 +1,6 @@
 export const PageRoutes = {
     Projects: "",
+    StartProject: "start-a-project",
     Catboard: "https://cat-board.vercel.app/",
     Medinivo: "https://medinivo.netlify.app/",
     Chatty: "https://chat-app-navy-sigma.vercel.app/",

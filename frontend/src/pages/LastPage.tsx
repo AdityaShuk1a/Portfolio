@@ -1,7 +1,11 @@
+import { useNavigate } from "react-router-dom";
+import { PageRoutes } from "../routes/PageRoutes";
 import styles from "../styles/lastPage.module.css";
 import BigButton from "../components/buttons/BigButton";
 
 const LastPage = () => {
+  const navigate = useNavigate();
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
@@ -12,7 +16,7 @@ const LastPage = () => {
           TOGETHER
         </h1>
         <div className={styles.actions}>
-          <BigButton text="START A PROJECT"/>
+          <BigButton action={() => navigate(PageRoutes.StartProject)} text="START A PROJECT"/>
           <BigButton text="SAY HI"/>
         </div>
       </div>
