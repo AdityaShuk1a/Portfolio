@@ -37,6 +37,7 @@
 }
 
 .card {
+    margin: 0px 10px;
     cursor: pointer;
     padding: 1.75rem;
     border-radius: 1rem;

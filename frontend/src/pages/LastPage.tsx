@@ -1,4 +1,5 @@
 import styles from "../styles/lastPage.module.css";
+import BigButton from "../components/buttons/BigButton";
 
 const LastPage = () => {
   return (
@@ -11,12 +12,8 @@ const LastPage = () => {
           TOGETHER
         </h1>
         <div className={styles.actions}>
-          <div className={styles.card}>
-            <h1 className={styles.cardText}>START A PROJECT</h1>
-          </div>
-          <div className={styles.card}>
-            <h1 className={styles.cardText}>SAY HI</h1>
-          </div>
+          <BigButton text="START A PROJECT"/>
+          <BigButton text="SAY HI"/>
         </div>
       </div>
     </div>

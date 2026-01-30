@@ -34,7 +34,7 @@
     flex-grow: 1;
     display: grid;
     max-width: 72rem;
-    padding: 0 1.5rem;
+    padding: 2rem 1.5rem;
     grid-template-columns: 1fr;
 }
 
@@ -44,10 +44,13 @@
     border-radius: 1rem;
     transition: all 0.3s ease;
     background: var(--white-darker);
+    border: 1px solid var(--gray-dark);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .card:hover {
+    border: 1px solid var(--gray-dark);
+    transform: translateY(-6px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 

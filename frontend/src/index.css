@@ -5,17 +5,20 @@
 }
 
 :root {
-  --gray-lg: #4b5563;
-  --slate: #111;
-  --gray-dark: #374151;
-  --white-darker: #f9fafb;
-  --gray-md: #6b7280;
-  --light-gray: #9ca3af;
   --gray: gray;
+  --slate: #111;
   --black: black;
+  --white: #ffffff;
+  --gray-md: #6b7280;
+  --gray-lg: #4b5563;
+  --gray-dark: #374151;
+  --light-gray: #9ca3af;
+  --slate-light: #302e3e;
+  --white-darker: #f9fafb;
 }
 
 ::selection {
+  color: var(--white);
   background-color: var(--gray);
 }
 

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import styles from "../styles/project.module.css";
+import { PageRoutes } from "../routes/PageRoutes";
 import medinivo from "../assets/projectsImage/medinivo.jpeg";
 import chatAppImage from "../assets/projectsImage/chat-app.jpeg";
 import catBoardImage from "../assets/projectsImage/cat-board.jpg";
@@ -18,21 +19,21 @@ const Projects = () => {
       id: 1,
       img: medinivo,
       name: "Medinivo",
-      Github: "https://github.com/adityashukla04/catboard",
+      Github: PageRoutes.Medinivo,
       desc: "Typing trainer with animated UI and real-time accuracy tracking",
     },
     {
       id: 2,
       name: "CAT-BOARD",
       img: catBoardImage,
-      Github: "https://github.com/adityashukla04/servEase",
+      Github: PageRoutes.Catboard,
       desc: "Service marketplace with scalable backend and user authentication",
     },
     {
       id: 3,
       name: "CHAT-APP",
       img: chatAppImage,
-      Github: "https://github.com/adityashukla04/realtime-chat-app",
+      Github: PageRoutes.Chatty,
       desc: "Real-time chat app using Socket.io and custom UI transitions",
     },
     {
@@ -45,10 +46,14 @@ const Projects = () => {
   ];
 
   const [showAll, setShowAll] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
+
+  const handleShow = () => {
+    showAll ? setShowAll(false) : setShowAll(true);
+  };
 
   useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    const handleResize = () => setIsMobile(window.innerWidth < 640);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -58,27 +63,23 @@ const Projects = () => {
 
   return (
     <section className={styles.section}>
-      {/* Title */}
       <div className={styles.titleWrapper}>
         <h1 className={styles.title}>
           MY <span>WORK</span>
         </h1>
       </div>
-
-      {/* Grid */}
       <div className={styles.grid}>
         {visibleProjects.map((project) => (
           <a
+            target="_blank"
             key={project.id}
             href={project.Github}
-            target="_blank"
-            rel="noopener noreferrer"
             className={styles.card}
+            rel="noopener noreferrer"
           >
             <div className={styles.imageWrapper}>
               <img src={project.img} alt={project.name} />
             </div>
-
             <div className={styles.content}>
               <h2>{project.name}</h2>
               <p>{project.desc}</p>
@@ -86,11 +87,9 @@ const Projects = () => {
           </a>
         ))}
       </div>
-
-      {/* Button */}
-      <div className={styles.buttonWrapper}>
-        <button onClick={() => setShowAll(true)}>View All Projects</button>
-      </div>
+        {/* <div className={styles.buttonWrapper}>
+          <Button action={handleShow} />
+        </div> */}
     </section>
   );
 };
