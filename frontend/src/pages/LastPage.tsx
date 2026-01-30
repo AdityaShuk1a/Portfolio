@@ -16,8 +16,14 @@ const LastPage = () => {
           TOGETHER
         </h1>
         <div className={styles.actions}>
-          <BigButton action={() => navigate(PageRoutes.StartProject)} text="START A PROJECT"/>
-          <BigButton text="SAY HI"/>
+          <BigButton 
+            text="START A PROJECT"
+            action={() => navigate(PageRoutes.StartProject)} 
+          />
+          <BigButton 
+            text="SAY HI"
+            action={() => window.location.href = PageRoutes.Mail} 
+          />
         </div>
       </div>
     </div>
