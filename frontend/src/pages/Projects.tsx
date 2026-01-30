@@ -44,8 +44,7 @@ const Projects = () => {
       img: "https://wallup.net/wp-content/uploads/2018/10/06/708149-kittens-kitten-cat-cats-baby-cute-s.jpg",
     },
   ];
-
-  const [showAll, setShowAll] = useState(false);
+  
   const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
 
   // const handleShow = () => {
@@ -59,7 +58,7 @@ const Projects = () => {
   }, []);
 
   const visibleProjects =
-    isMobile && !showAll ? projectWorks.slice(0, 2) : projectWorks;
+    isMobile ? projectWorks.slice(0, 2) : projectWorks;
 
   return (
     <section className={styles.section}>
