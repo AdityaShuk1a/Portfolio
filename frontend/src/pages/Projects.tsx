@@ -48,9 +48,9 @@ const Projects = () => {
   const [showAll, setShowAll] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
 
-  const handleShow = () => {
-    showAll ? setShowAll(false) : setShowAll(true);
-  };
+  // const handleShow = () => {
+  //   showAll ? setShowAll(false) : setShowAll(true);
+  // };
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 640);
