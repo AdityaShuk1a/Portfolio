@@ -1,34 +1,34 @@
-
-import DefaultHomePage from "./DefaultHomePage";
-import { ChevronDown} from "lucide-react";
-import HomePagePart2 from "../components/homePageComponents/HomePagePart2";
-import Projects from "./Projects"
+import Projects from "./Projects";
 import LastPage from "./LastPage";
-
+import { ChevronDown } from "lucide-react";
+import styles from "../styles/home.module.css";
+import DefaultHomePage from "./DefaultHomePage";
+import HomePagePart2 from "../components/home/HomePagePart2";
 
 const HomePage = () => {
-  
-   
   return (
-    <div className="relative w-full h-full bg-black overflow-x-hidden" >
+    <div className={styles.wrapper}>
       {/* Background layer */}
       <DefaultHomePage />
-      
 
-      <div className="relative z-20 bg-transparent "  >
-        <section className="h-screen bg-transparent flex justify-center items-end p-28 text-white  font-bold">
-          <ChevronDown size={50}/>
+      <div className={styles.content}>
+        {/* Scroll Indicator */}
+        <section className={styles.chevronSection}>
+          <ChevronDown size={50} />
         </section>
-        <section className="h-screen w-full"  >
+
+        {/* Sections */}
+        <section className={styles.section}>
           <HomePagePart2 />
         </section>
-        <section className="h-screen w-full" >
+
+        <section className={styles.section}>
           <Projects />
         </section>
-        <section className="h-screen w-full" >
+
+        <section className={styles.section}>
           <LastPage />
         </section>
-
       </div>
     </div>
   );

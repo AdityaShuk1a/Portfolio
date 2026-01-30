@@ -1,11 +1,24 @@
 @import "tailwindcss";
+
 @plugin "daisyui" {
   themes: all;
 }
 
-::selection{
-  background-color: gray
+:root {
+  --gray-lg: #4b5563;
+  --slate: #111;
+  --gray-dark: #374151;
+  --white-darker: #f9fafb;
+  --gray-md: #6b7280;
+  --light-gray: #9ca3af;
+  --gray: gray;
+  --black: black;
 }
-body{
-  background-color: black;
+
+::selection {
+  background-color: var(--gray);
+}
+
+body {
+  background-color: var(--black);
 }
