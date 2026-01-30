@@ -4,6 +4,7 @@ import { PageRoutes } from "../routes/PageRoutes";
 import medinivo from "../assets/projectsImage/medinivo.jpeg";
 import chatAppImage from "../assets/projectsImage/chat-app.jpeg";
 import catBoardImage from "../assets/projectsImage/cat-board.jpg";
+import chaiCulture from "../assets/projectsImage/ChaiCulture.jpeg";
 
 interface ProjectWork {
   id: number;
@@ -20,14 +21,14 @@ const Projects = () => {
       img: medinivo,
       name: "Medinivo",
       Github: PageRoutes.Medinivo,
-      desc: "Typing trainer with animated UI and real-time accuracy tracking",
+      desc: "A user friendly healthcare website..",
     },
     {
       id: 2,
       name: "CAT-BOARD",
       img: catBoardImage,
       Github: PageRoutes.Catboard,
-      desc: "Service marketplace with scalable backend and user authentication",
+      desc: "A leaderboard typing game which calculates your wpm and compares..",
     },
     {
       id: 3,
@@ -38,10 +39,10 @@ const Projects = () => {
     },
     {
       id: 4,
-      name: "NEVER-NOTE",
-      Github: "https://github.com/adityashukla04/portfolio",
-      desc: "Minimalist portfolio with GSAP animations and responsive layout",
-      img: "https://wallup.net/wp-content/uploads/2018/10/06/708149-kittens-kitten-cat-cats-baby-cute-s.jpg",
+      img: chaiCulture,
+      name: "Chai Culture UI",
+      Github: PageRoutes.ChaiCulture,
+      desc: "A freelanced Landing page UI for Chai Culture...",
     },
   ];
   

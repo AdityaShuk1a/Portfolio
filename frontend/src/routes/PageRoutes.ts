@@ -7,4 +7,5 @@ export const PageRoutes = {
     Chatty: "https://chat-app-navy-sigma.vercel.app/",
     Leetcode: "https://leetcode.com/u/AdityaShuk1aa/",
     Linkedin: "https://www.linkedin.com/in/adityashuk1a/",
+    ChaiCulture: "https://chai-culture-five-kappa.vercel.app/",
 }
